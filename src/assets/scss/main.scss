@@ -1,0 +1,132 @@
+﻿body {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif !important;
+  background-color: #f1f1f1;
+}
+
+.btn-purple {
+  background-color: #912da2;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #a122b8;
+    color: #ffffff
+
+
+  }
+}
+
+//home begin
+.home {
+  .nav {
+    &-list-item {
+      list-style: none;
+
+      a {
+        padding: 20px;
+        color: #000000;
+        text-decoration: underline;
+
+        &:hover {
+          color: #912da2;
+        }
+      }
+    }
+  }
+}
+
+//home end
+
+//joblist begin
+.job-list {
+  .search {
+
+    .form-group {
+      &.location {
+        border-right: 2px solid #f1f1f1;
+      }
+
+      input,
+      select {
+        height: 55px !important;
+
+        &:focus,
+        &:active {
+          outline: 0;
+          border: 0;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .btn-clear {
+      border-radius: 0;
+    }
+  }
+}
+
+//joblist end
+
+//cart begin
+.cart-wrapper {
+  .cart {
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+
+    &-header {}
+
+    &-body {
+      .description {
+        .position {
+          font-size: 14px;
+
+          strong {
+            font-size: 10px;
+            color: rgb(190, 29, 29);
+          }
+        }
+
+        .location {
+          font-size: 13px;
+        }
+
+        .detail {
+          font-size: 13px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &-footer {
+      .btn {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+//cart end
+
+//jobDetail begin
+.job-detail-wrapper {
+  .job-detail {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #ffffff;
+    min-height: 75vh;
+    padding: 20px 30px;
+    padding-bottom: 65px;
+
+    &-header {
+      top: -15px;
+    }
+
+    &-footer{
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+    }
+  }
+}
+
+//jobDetail end
