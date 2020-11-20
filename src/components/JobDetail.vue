@@ -24,14 +24,11 @@
         </div>
       </div>
       <div class="job-detail-footer d-flex justify-content-end mt-2">
-        <router-link
+        <a
           class="btn btn-purple"
-          :to="{
-            path: 'jobdetail/' + job.jobId,
-            params: { jobId: job.jobId },
-          }"
-          >İlana Başvur</router-link
-        >
+          @click="applicationAccept()"
+          >İlana Başvur
+        </a>
       </div>
     </div>
   </div>
@@ -48,6 +45,12 @@ export default {
   },
   data() {
     return {};
+  },
+
+  methods: {
+    applicationAccept() {
+      alert('Başvurunuz kabul edilmiştir.'); // eslint-disable-line no-alert
+    },
   },
 };
 </script>
