@@ -20,8 +20,8 @@ export default new Vuex.Store({
           distance: '8,53 km yakınında',
           latitude: 41.050968170166023,
           longitude: 29.062856674194339,
-          cityName: 'İstanbul',
-          townName: 'Maslak',
+          cityName: 'Mersin',
+          townName: 'Pozcu',
         },
         {
           jobId: 'C71CD1954BA149BCAF42B25F775EA4KARIYER',
@@ -34,8 +34,8 @@ export default new Vuex.Store({
           distance: '8,53 km yakınında',
           latitude: 41.050968170166023,
           longitude: 29.062856674194339,
-          cityName: 'İstanbul',
-          townName: 'Ümraniye',
+          cityName: 'Bursa',
+          townName: 'Görükle',
         },
 
         {
@@ -77,7 +77,7 @@ export default new Vuex.Store({
           distance: '8,53 km yakınında',
           latitude: 41.050968170166023,
           longitude: 29.062856674194339,
-          cityName: 'İzmir',
+          cityName: 'Alanya',
           townName: 'Merkez',
         },
         ],

@@ -70,7 +70,13 @@ export default {
       let filteredJobs = this.jobs;
       if (this.search) {
         filteredJobs = this.jobs.filter(
-          (job) => job.positionName.toLowerCase().indexOf(this.search) > -1,
+          (job) => {
+            const positionName = job.positionName.toLowerCase().includes(this.search);
+            const companyName = job.companyName.toLowerCase().includes(this.search);
+            const cityName = job.cityName.toLowerCase().includes(this.search);
+
+            return positionName || companyName || cityName;
+          },
         );
       }
       if (this.selectedLocation) {
