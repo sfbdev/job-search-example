@@ -67,7 +67,7 @@ export default new Vuex.Store({
           townName: 'Mustafakemalpaşa',
         },
         {
-          jobId: 'C71CD1954BA149BCAF42B25F775EA4SAHIBINDEN',
+          jobId: 'C71CD1954BA149BCAF42B25F775EA4TRENDYOL',
           positionName: 'Digital Marketing Specialist',
           companyName: 'Trendyol',
           durationDay: 0,
