@@ -1,5 +1,5 @@
 <template>
-  <div class="job-list">
+  <div class="job-list mt-4">
     <div class="container">
       <div class="search d-flex">
         <div class="form-group location w-50">
