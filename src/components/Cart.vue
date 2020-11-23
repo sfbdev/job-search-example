@@ -47,10 +47,6 @@ export default {
       type: Object,
       default: Object,
     },
-    isJobDetail: {
-      type: Boolean,
-      default: false,
-    },
   },
   data() {
     return {};

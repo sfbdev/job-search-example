@@ -85,6 +85,7 @@ export default new Vuex.Store({
         total: 5,
       },
     },
+    cities: ['Alanya', 'Ankara', 'Bursa', 'İstanbul', 'İzmir', 'Mersin'],
   },
   mutations: {},
   actions: {},

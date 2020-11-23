@@ -1,9 +1,6 @@
 <template>
   <div class="job-list">
     <div class="container">
-      <div class="back my-4">
-        <router-link :to="'/'">Anasayfaya Dön</router-link>
-      </div>
       <div class="search d-flex">
         <div class="form-group location w-50">
           <select
@@ -38,12 +35,17 @@
         </div>
       </div>
       <div class="row">
-        <app-cart
-          class="col-4 mb-3"
-          v-for="(job, id) in filterJobs"
-          :job="job"
-          :key="id"
-        />
+        <template v-if="filterJobs.length != 0">
+          <app-cart
+            class="col-lg-4 mb-3"
+            v-for="(job, id) in filterJobs"
+            :job="job"
+            :key="id"
+          />
+        </template>
+        <div class="col-12" v-else>
+          Aradığınız filtreye uygun sonuç bulunamadı.
+        </div>
       </div>
     </div>
   </div>
@@ -57,27 +59,29 @@ export default {
     return {
       search: '',
       selectedLocation: '',
-      cities: ['İstanbul', 'Bursa', 'İzmir', 'Ankara'],
     };
   },
 
   computed: {
     ...mapState({
       jobs: (state) => state.jobList.result.items,
+      cities: (state) => state.cities,
     }),
 
     filterJobs() {
       let filteredJobs = this.jobs;
       if (this.search) {
-        filteredJobs = this.jobs.filter(
-          (job) => {
-            const positionName = job.positionName.toLowerCase().includes(this.search);
-            const companyName = job.companyName.toLowerCase().includes(this.search);
-            const cityName = job.cityName.toLowerCase().includes(this.search);
+        filteredJobs = this.jobs.filter((job) => {
+          const positionName = job.positionName
+            .toLowerCase()
+            .includes(this.search);
+          const companyName = job.companyName
+            .toLowerCase()
+            .includes(this.search);
+          const cityName = job.cityName.toLowerCase().includes(this.search);
 
-            return positionName || companyName || cityName;
-          },
-        );
+          return positionName || companyName || cityName;
+        });
       }
       if (this.selectedLocation) {
         filteredJobs = filteredJobs.filter(
